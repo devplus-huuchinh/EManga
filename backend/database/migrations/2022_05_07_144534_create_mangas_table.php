@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('mangas', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image_url');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
         });
     }

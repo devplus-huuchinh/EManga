@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->id();
+            $table->string('chapter');
+            $table->string('image_url');
+            $table->unsignedBigInteger('manga_id')->nullable();
             $table->timestamps();
         });
     }
