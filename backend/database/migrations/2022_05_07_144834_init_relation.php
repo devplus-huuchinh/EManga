@@ -38,6 +38,17 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+                // user-role (1-N)
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['role_id']);
+        });
+        //  user-campaign (1-N)
+        Schema::table('mangas', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
+        // campaign-profile  && position profile  (1-N)
+        Schema::table('chapters', function (Blueprint $table) {
+            $table->dropForeign(['manga_id']);
+        });
     }
 };
