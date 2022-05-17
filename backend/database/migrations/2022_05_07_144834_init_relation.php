@@ -13,23 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
+
         // role - user (1-N)
         schema::table('users', function(Blueprint $table){
             $table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade')->onDelete('cascade');
         });
+        
         // user - Manga (1-N)
         schema::table('mangas', function(Blueprint $table){
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
+
         // Manga - chapter (1-N)
         schema::table('chapters', function(Blueprint $table){
             $table->foreign('manga_id')->references('id')->on('mangas')->onUpdate('cascade')->onDelete('cascade');
         });
-        // Manga - type_manga (1-N) && type_manga type (1-N)
-        // schema::table('type_mangas', function(Blueprint $table){
-        //     $table->foreign('manga_id')->references('id')->on('mangas')->onUpdate('cascade')->onDelete('cascade');
-        //     $table->foreign('type_id')->references('id')->on('types')->onUpdate('cascade')->onDelete('cascade');
-        // });
+
     }
 
     /**

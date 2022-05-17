@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class TypeManga extends Model
 {
     use HasFactory;
+    
+    protected $table = 'type-mangas';
 
-    protected $table="type_mangas";
+    protected $fillable = [
+        'manga_id',
+        'type_id',
+    ];
+
 }
