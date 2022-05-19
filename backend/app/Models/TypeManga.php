@@ -16,4 +16,9 @@ class TypeManga extends Model
         'type_id',
     ];
 
+    public function manga()
+    {
+        return $this->belongsTo(Manga::class);
+    }
+
 }
