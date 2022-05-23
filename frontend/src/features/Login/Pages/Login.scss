@@ -1,0 +1,19 @@
+.login {
+  height: 100%;
+  background-image: url("../../../assets/Login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .login-input_field {
+    background: rgb(255, 255, 255);
+    padding: auto;
+    // color: rgb(255, 255, 255);
+    opacity: 0.8;
+    height: 100%;
+    padding: 25px 45px;
+  }
+  .login-image_field {
+    height: 100%;
+    background: rgb(39, 42, 55);
+    opacity: 0.5;
+  }
+}
