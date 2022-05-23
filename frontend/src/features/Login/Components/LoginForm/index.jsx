@@ -25,7 +25,12 @@ const LoginForm = (props) => {
           />
         </Grid>
         <Grid item>
-          <TextField className="login-field" id="" label="Password" />
+          <TextField
+            className="login-field"
+            id=""
+            label="Password"
+            variant="outlined"
+          />
         </Grid>
         <Grid item>
           <Button variant="contained" color="primary">
