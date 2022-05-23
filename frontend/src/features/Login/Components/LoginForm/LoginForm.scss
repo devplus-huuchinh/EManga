@@ -1,0 +1,16 @@
+.login-form {
+  width: 100%;
+  height: 100%;
+  .login-grid {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    padding: 193px 0px;
+    .login-field {
+      width: 100%;
+    }
+  }
+}
