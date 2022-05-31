@@ -2,17 +2,17 @@ import axiosClient from "./axiosClient";
 
 const authApi = {
   login: (data) => {
-    const url = "/auth/login";
+    const url = "http://localhost/api/auth/login";
     return axiosClient.post(url, data);
   },
 
   register: (data) => {
-    const url = "/auth/register";
+    const url = "http://localhost/api/auth/register";
     return axiosClient.post(url, data);
   },
 
   logout: (data) => {
-    const url = "/auth/logout";
+    const url = "http://localhost/api/auth/logout";
     return axiosClient.post(url, data);
   },
 
