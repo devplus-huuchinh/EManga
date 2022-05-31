@@ -1,19 +1,20 @@
 import axios from "axios";
-import queryString from "querystring";
+import queryString from "query-string";
 
 const axiosClient = axios.create({
   withCredentials: true,
-  baseUrl: "http://localhost/api/",
+  baseUrl: `${process.env.REACT_APP_NAME}/api/`,
   headers: {
     "Access-Control-Allow-Origin": "*",
     "Content-type": "application/json",
     "X-Requested-With": "XMLHttpRequest",
+    // 'X-CSRF-TOKEN': window.csrf_token,
   },
   paramsSerializer: (params) => queryString.stringify(params),
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  const token = localStorage.getItem("access_token");
+  const token = localStorage.getItem("id_token");
   if (token) {
     config.headers.Authorization = `Bearer  + ${token}`;
   }
