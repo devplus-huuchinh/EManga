@@ -23,6 +23,7 @@ Route::prefix('/auth')->group(
                 Route::post('/register','register');
                 Route::post('/login','login');
                 Route::post('/logout','logout');
+                Route::get('/getProfile','getUsers');
             }
         );
 
