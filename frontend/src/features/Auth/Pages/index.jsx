@@ -30,12 +30,12 @@ const Login = (props) => {
       direction='row'
       justify='flex-start'
       alignItems='flex-start'
-      alignContent='stretch'
+      // alignContent='stretch'
       wrap='nowrap'
       className='login'
-      maxHeight='md'
+      maxHeight='xl'
     >
-      <Grid item md={6} className='login-input_field'>
+      <Grid item md={6} sx={6} className='login-input_field'>
         <LoginForm handleLoginSubmit={handleLoginSubmit} />
       </Grid>
       <Grid item className='login-image_field'></Grid>
